@@ -11,7 +11,8 @@ public class Burger extends Item {
         return super.getName();
     }
 
-    public double getExtraPrice(String topping) {
+    // function used to get the price for toppings
+    public double getToppingsPrice(String topping) {
         return switch (topping.toUpperCase()) {
             case "AVOCADO" -> 1.0;
             case "CHEESE", "TOMATO" -> 1.5;
@@ -20,6 +21,7 @@ public class Burger extends Item {
         };
     }
 
+    // used in the meal order to get a total price including the burger and toppings
     @Override
     public double getAdjustedPrice() {
         return getBasePrice() + ((extra1 == null) ? 0 : extra1.getAdjustedPrice())
@@ -28,9 +30,9 @@ public class Burger extends Item {
     }
 
     public void addToppings(String extra1, String extra2, String extra3) {
-        this.extra1 = new Item("TOPPING", extra1, getExtraPrice(extra1));
-        this.extra2 = new Item("TOPPING", extra2, getExtraPrice(extra2));
-        this.extra3 = new Item("TOPPING", extra3, getExtraPrice(extra3));
+        this.extra1 = new Item("TOPPING", extra1, getToppingsPrice(extra1));
+        this.extra2 = new Item("TOPPING", extra2, getToppingsPrice(extra2));
+        this.extra3 = new Item("TOPPING", extra3, getToppingsPrice(extra3));
     }
 
     public void printExtraList() {
@@ -47,7 +49,7 @@ public class Burger extends Item {
 
     public void printList() {
         // prints the burger and goes on to the toppings
-        System.out.printf(getName() + " : %.2f%n", getBasePrice());
+        System.out.printf(super.getName() + " : %.2f".indent(20 - getName().length()), getBasePrice());
 
         // toppings printed
         printExtraList();
