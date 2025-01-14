@@ -26,11 +26,12 @@ public class MealOrder {
         return drink.getAdjustedPrice() + sideItem.getAdjustedPrice() + burger.getAdjustedPrice();
     }
 
+    // prints the whole mealorder
     public void printItemizedList() {
         burger.printList();
         drink.printList();
         sideItem.printList();
         System.out.println("-".repeat(30));
-        System.out.println(String.format("TOTAL :  %.2f", getTotalPrice()).indent(8));
+        System.out.println(String.format("TOTAL : %.2f", getTotalPrice()).indent(15));
     }
 }
