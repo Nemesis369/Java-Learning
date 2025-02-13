@@ -8,8 +8,12 @@ public class App {
         bank.addCustomer("ak", 1000d);
         System.out.println(bank);
 
-        bank.findCustomer("a");
+        bank.addTransaction("ak", -50.43d);
+        bank.addTransaction("ak", -10.40d);
+        bank.printStatement("ak");
 
-        bank.addTransaction("ak", 200d);
+        bank.addCustomer("Bob", 25);
+        bank.addTransaction("Bob", 1000);
+        bank.printStatement("Bob");
     }
 }

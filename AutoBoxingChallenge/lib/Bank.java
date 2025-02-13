@@ -26,7 +26,7 @@ public class Bank {
             }
         }
 
-        // System.out.println("Customer '" + customerName + "' not found");
+        System.out.println("Customer '" + customerName + "' not found");
         return null;
     }
 
@@ -55,7 +55,7 @@ public class Bank {
             System.out.println("Customer name: " + temp.name().toUpperCase());
             System.out.println("Transactions:");
             for (double d : temp.transactions()) {
-                System.out.printf("%10.2f (%s)\n", d, d > 0 ? "credit" : "debit");
+                System.out.printf("%10.2f (%s)\n", d, d >= 0 ? "credit" : "debit");
             }
         }
     }
