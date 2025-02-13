@@ -1,3 +1,5 @@
+package ArrayChallenge.src;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;

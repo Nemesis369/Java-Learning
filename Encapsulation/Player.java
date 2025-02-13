@@ -1,3 +1,5 @@
+package Encapsulation;
+
 public class Player {
     public String fullName;
     public int health;

@@ -1,3 +1,7 @@
+package Encapsulation.src;
+
+import Encapsulation.EnhancedPlayer;
+
 public class Main {
 
     public static void main(String[] args) {

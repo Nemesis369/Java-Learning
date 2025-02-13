@@ -1,5 +1,7 @@
+package Encapsulation;
+
 public class EnhancedPlayer {
-    
+
     private String fullName;
     private int healthPercentage;
     private String weapon;
@@ -10,9 +12,9 @@ public class EnhancedPlayer {
 
     public EnhancedPlayer(String fullName, int healthPercentage, String weapon) {
         this.fullName = fullName;
-        if(healthPercentage <= 0) {
+        if (healthPercentage <= 0) {
             this.healthPercentage = 1;
-        } else if(healthPercentage > 100) {
+        } else if (healthPercentage > 100) {
             this.healthPercentage = 100;
         } else {
             this.healthPercentage = healthPercentage;
@@ -22,7 +24,7 @@ public class EnhancedPlayer {
 
     public void loseHealth(int damage) {
         healthPercentage = healthPercentage - damage;
-        if(healthPercentage <= 0) {
+        if (healthPercentage <= 0) {
             System.out.println("Player got knocked out of the game");
         }
     }
@@ -33,7 +35,7 @@ public class EnhancedPlayer {
 
     public void restoreHealth(int extraHealth) {
         healthPercentage = healthPercentage + extraHealth;
-        if(healthPercentage > 100) {
+        if (healthPercentage > 100) {
             System.out.println("Player restored to 100%");
             healthPercentage = 100;
         }

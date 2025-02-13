@@ -1,3 +1,5 @@
+package Inheritance;
+
 public class Fish extends Animal {
     private int fins;
     private int gills;
@@ -11,6 +13,7 @@ public class Fish extends Animal {
     private void moveMuscles() {
         System.out.println("muscles moving ");
     }
+
     private void moveBackFin() {
         System.out.println("backfin moving ");
     }
@@ -19,7 +22,7 @@ public class Fish extends Animal {
     public void move(String speed) {
         super.move(speed);
         moveMuscles();
-        if(speed == "fast") {
+        if (speed == "fast") {
             moveBackFin();
         }
         System.out.println();

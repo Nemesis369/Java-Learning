@@ -1,3 +1,5 @@
+package ComputerFactory.src;
+
 public class Product {
     
     private String model;

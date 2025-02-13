@@ -1,3 +1,5 @@
+package ComputerFactory.src;
+
 public class PersonalComputer extends Product {
 
     private Monitor m;
@@ -12,18 +14,19 @@ public class PersonalComputer extends Product {
     }
 
     // public ComputerCase getcomputerCase() {
-    //     return cc;
+    // return cc;
     // }
     // public Monitor getMonitor() {
-    //     return m;
+    // return m;
     // }
     // public Motherboard getMotherboard() {
-    //     return mb;
+    // return mb;
     // }
 
     private void drawLogo() {
         this.m.drawPixelAt(1200, 50, "yellow");
     }
+
     public void powerUp() {
         this.cc.pressPowerButton();
         drawLogo();
