@@ -1,7 +1,4 @@
-import Inheritance.Animal;
-import Inheritance.Dog;
-import Inheritance.Fish;
-
+package Inheritance;
 public class Main {
     public static void main(String[] args) {
         Animal animal = new Animal("Generic Animal", "Huge", 400);
