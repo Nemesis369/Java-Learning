@@ -35,10 +35,18 @@ class ArtObject extends ProductForSale {
     }
 }
 
-// class Books extends ProductForSale {
-// public void showDetails() {
-// }
-// }
+class Furniture extends ProductForSale {
+
+    public Furniture(String type, double price, String description) {
+        super(type, price, description);
+    }
+
+    public void showDetails() {
+        System.out.println("This " + type + " was manufactured in India");
+        System.out.printf("The price of the piece is %7.2f %n", price);
+        System.out.println(description);
+    }
+}
 
 // class NoteBooks extends ProductForSale {
 // public void showDetails() {
