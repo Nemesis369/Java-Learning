@@ -1,11 +1,11 @@
-package dev.ak;
+package Packages.src.dev.ak;
 
-import com.abc.first.Item;
+import Packages.src.com.abc.first.Item;
 
 public class Main {
 
     public static void main(String[] args) {
-        Item firstItem = new Item("Burger");
+        Item firstItem =  null;
         System.out.println(firstItem);
     }
 }

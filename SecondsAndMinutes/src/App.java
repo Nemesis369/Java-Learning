@@ -1,3 +1,5 @@
+package SecondsAndMinutes.src;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println(getDurationString(3945));

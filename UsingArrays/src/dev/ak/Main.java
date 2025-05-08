@@ -1,7 +1,7 @@
-package dev.ak;
+package UsingArrays.src.dev.ak;
 
-import java.util.Random;
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
 
